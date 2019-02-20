@@ -1,0 +1,12 @@
+# config for mastocaster on botsin.space
+
+# URL of instance we are connecting to
+Instance URL:
+# URL of account
+Account URL:
+# Client ID of the bot on that account
+Client ID:
+Client Secret:
+Access Token:
+# Visibility of outgoing posts
+Post Visibility:
