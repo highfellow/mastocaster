@@ -7,7 +7,7 @@ The basic idea:
 General Points:
 
 - I want it to be flexible and able to be used in various different ways. E.g. discussion group, publishing group with different readers and writers, or ad hoc time limited party group.
-- I want to avoid duplicating features already built in to Mastodon and also where it is possible to turn existing features to an alternate use rather than create something new.
+- I want to avoid duplicating features already built in to Mastodon and also where it is possible I would rather turn existing features to an alternate use rather than create something new.
 - also to include features that make moderation easy and reduce the potential for conflict. It might be good to do some actual research on how people have solved the problem of moderation before. If there are ways to design the software that encourage the better sides of human groups (gathering around common interests) without encouraging the worst sides (cliquiness and exclusion), then go for them.
 - want to start with the simplest set of features that let us put something useful online in a way that isn't going to cause problems for people. (E.g. by having no moderation facilities at all, but I think this is already handled by the ability to message users and to delete or ban followers). Then add other features as and when we feel up to it.
 
@@ -19,11 +19,12 @@ Features:
 * two modes of passing messages - Boost and Relay. Boost boosts the post so that the original ownership remains, but has the problem that the post has to also be sent to the user's followers. Relay creates a new post with the original poster @mentioned at the start.
 ? for Relay, having the ability to post images (this happens automatically for Boost).
 - can send control messages to the bot by using a syntax like '&command1 param1 param2; &command2 param1;'.
-* three membership groups - reader, writer, and moderator / admin? (maybe split moderator and admin at some point).
+- members should be able to send a message to the admin by using some kind of syntax like &admin.
+* three membership groups - reader, writer, and admin? (maybe split moderator and admin at some point).
 * for each of these groups, there are several ways to select who is in each group:
   * one is by setting the membership to be either Followers or Followed accounts. E.g. the readers could be Followers and the writers could be Followed accounts. This way people could add themselves as readers by following the account, and the account owner could add writers by following other accounts. This configuration would be good if you had a small number of people publishing information to a wider readership.
   * another is to include a list of account names in the config file.
-  - at some point we could add the feature for people to add or remove themselves by sending direct messages to the group account.
 - being able to kick members for a specified time period or ban them permanently.
 - an &command to ban all members and start again with an empty group.
+- an &command to delete all the previous messages and start again.
 - could also have the ability to invite a number of users who would be able to join the group by making a follow request which would be automatically accepted by the bot? This could be useful for creating ad hoc time limited groups similar to inviting a group of people to a physical venue. You would make a list of invitees and send it using an &command, and then those people would get invites and could add themselves as followers. People on the invite list would be automatically added whereas if someone else made a follow request then the admin would get a message asking them to approve or deny it.
